@@ -38,7 +38,7 @@
 const WebSocket = require('ws');
 
 const wss = new WebSocket.Server({ port: 12345 }); // Specify the desired port
-
+console.log("trying!");
 wss.on('connection', (ws) => {
     console.log('Client connected');
 
