@@ -42,7 +42,7 @@ wss.on('connection', function connection(ws) {
 
     ws.on('message', function message(data) {
       console.log('received: %s', data);
-      ws.send(data)
+      ws.send('hi back');
     });
   
     ws.send('something');
