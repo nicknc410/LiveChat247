@@ -37,17 +37,13 @@
 // });
 const WebSocket = require('ws');
 
-const wss = new WebSocket.Server({ port: 12345 }); // Specify the desired port
+const wss = new WebSocket.Server({ port: 2000 }); // Specify the desired port
 console.log("trying!");
-wss.on('connection', (ws) => {
-    console.log('Client connected');
-
-    ws.on('message', (message) => {
-        console.log(`Received: ${message}`);
-        ws.send(`Server received: ${message}`);
+wss.on('connection', function connection(ws) {
+    
+    ws.on('message', function message(data) {
+      console.log('received: %s', data);
     });
-
-    ws.on('close', () => {
-        console.log('Client disconnected');
-    });
-});
+  
+    ws.send('something');
+  });
