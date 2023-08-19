@@ -40,10 +40,9 @@ const WebSocket = require('ws');
 const wss = new WebSocket.Server({ port: 2000 }); // Specify the desired port
 wss.on('connection', function connection(ws) {
 
-    ws.on('message', function message(msg) {
-      console.log(msg);
-      ws.send('thing');
-    });
+    ws.onmessage = function(e) {
+        console.log(e.data);
+    };
   
     ws.send('something');
   });
