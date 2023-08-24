@@ -37,13 +37,29 @@
 // });
 const WebSocket = require('ws');
 
-const wss = new WebSocket.Server({ port: 2000 }); // Specify the desired port
+const wss = new WebSocket.Server({ port: 2000 });
+
+// Array to store all connected sockets
+const connectedSockets = [];
+
 wss.on('connection', function connection(ws) {
+    connectedSockets.push(ws); // Add the new socket to the array
 
     ws.onmessage = function(e) {
-        console.log(e.data);
-        ws.send(e.data);
+        const data = e.data;
+        console.log(data);
+
+        // Send the received data to all connected sockets
+        connectedSockets.forEach(socket => {
+            socket.send(data);
+        });
     };
-  
-    ws.send('something');
-  });
+
+    ws.on('close', function() {
+        // Remove the closed socket from the array
+        const index = connectedSockets.indexOf(ws);
+        if (index !== -1) {
+            connectedSockets.splice(index, 1);
+        }
+    });
+});
