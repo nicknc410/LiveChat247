@@ -41,6 +41,23 @@ const wss = new WebSocket.Server({ port: 2000 });
 
 // Array to store all connected sockets
 const connectedSockets = [];
+const express = require('express');
+const app = express();
+const port = 3000;
+app.use(express.json()); // For parsing JSON data
+app.use(express.urlencoded({ extended: true })); // For parsing URL-encoded data
+
+app.post('/submit', (req, res) => {
+    // Access data from the request body
+    const requestData = req.body;
+
+    ws.send(requestData['message']);
+    // Perform actions with the data
+    
+    // Send a response
+    res.send('Received POST request');
+  });
+
 
 wss.on('connection', function connection(ws) {
     connectedSockets.push(ws); // Add the new socket to the array
@@ -63,3 +80,6 @@ wss.on('connection', function connection(ws) {
         }
     });
 });
+app.listen(port, () => {
+    console.log(`Server is listening at http://localhost:${port}`);
+  });
