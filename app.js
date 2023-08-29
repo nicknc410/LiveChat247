@@ -47,29 +47,15 @@ const port = 3000;
 app.use(express.json()); // For parsing JSON data
 app.use(express.urlencoded({ extended: true })); // For parsing URL-encoded data
 
-app.post('/submit', (req, res) => {
-    // Access data from the request body
-    const requestData = req.body;
-
-    ws.send(requestData['message']);
-    // Perform actions with the data
-    
-    // Send a response
-    res.send('Received POST request');
-  });
-
 
 wss.on('connection', function connection(ws) {
     connectedSockets.push(ws); // Add the new socket to the array
-    console.log('connected WSS');
     ws.onmessage = function(e) {
         const data = e.data;
         console.log(data);
 
         // Send the received data to all connected sockets
-        connectedSockets.forEach(socket => {
-            socket.send(data);
-        });
+
     };
 
     ws.on('close', function() {
@@ -80,6 +66,16 @@ wss.on('connection', function connection(ws) {
         }
     });
 });
+app.post('/submit', (req, res) => {
+    // Access data from the request body
+    const requestData = req.body;
+
+    connectedSockets.forEach(socket => {
+        socket.send(requestData['message']);
+    });
+    // Send a response
+    res.send('Received POST request');
+  });
 app.listen(port, () => {
     console.log(`Server is listening at http://localhost:${port}`);
   });
