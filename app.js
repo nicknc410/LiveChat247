@@ -61,7 +61,7 @@ app.post('/submit', (req, res) => {
 
 wss.on('connection', function connection(ws) {
     connectedSockets.push(ws); // Add the new socket to the array
-
+    console.log('connected WSS');
     ws.onmessage = function(e) {
         const data = e.data;
         console.log(data);
