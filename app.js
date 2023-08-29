@@ -37,16 +37,19 @@
 // });
 const WebSocket = require('ws');
 
-const wss = new WebSocket.Server({ port: 2000 });
 
 // Array to store all connected sockets
 const connectedSockets = [];
+const http = require('http');
 const express = require('express');
 const app = express();
 const port = 3000;
 app.use(express.json()); // For parsing JSON data
 app.use(express.urlencoded({ extended: true })); // For parsing URL-encoded data
+const server = http.createServer(app); // Create HTTP server
 
+// WebSocket server setup
+const wss = new WebSocket.Server({ server }); // Attach WebSocket to the serve
 
 wss.on('connection', function connection(ws) {
     connectedSockets.push(ws); // Add the new socket to the array
