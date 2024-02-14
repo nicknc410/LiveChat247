@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- google symbols -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="chatbot-container">
+        <div class="chatbox">
+            <div class="chatbox-container">
+                <header class="chatbox-intro">
+                    <img class="robot"
+                        src="https://images.squarespace-cdn.com/content/63c867491abe131843b09837/4638c5cf-e1f4-452e-8973-e9219104fbba/Message+Bot.png?content-type=image%2Fpng"
+                        alt="robot-clear">
+                    <h3>24/7 Teach Chatbot</h3>
+                    <p>Our AI powered chatbot can assist you</p>
+                </header>
+                <header class="livechat-intro">
+                    <h3>24/7 Teach Chatbot Support</h3>
+                    <p>Speak with a support respresentative assist you</p>
+                </header>
+
+                <div class="messages-container">
+                    <!--where chatbot will have the conversation -->
+                    <div class="messages">
+                        <div class="message">
+                            <img class="robot"
+                                src="https://images.squarespace-cdn.com/content/63c867491abe131843b09837/490548d6-1ab1-4592-a066-0b8eb1beb394/Message+Bot+%281%29.png?content-type=image%2Fpng"
+                                alt="robot-fill">
+                            <div>
+                                <p class="intro-help">Welcome to the chat! I'm here to help you. Click the <img class="help-circle" src="https://images.squarespace-cdn.com/content/63c867491abe131843b09837/c751c1a9-7cb4-478d-a31d-8dedf9969783/Help.png?content-type=image%2Fpng"/> icon if you need further assistance.
+                                </p>
+                                <div class="example-prompt">
+                                    <p>Stuck? Try a prompt:</p>
+                                    <ul>
+                                        <li class="sample-question">What is 24/7 Teach's goal? </li>
+
+                                        <li class="sample-question">How much does the UX/UI design course cost?</li>
+
+                                        <li class="sample-question">What type of course does 24/7 Teach offer?</li>
+
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="resend-btn-container">
+                            <button class="resend-btn"><span class="material-symbols-outlined">
+                                    replay
+                                </span>Regenerate Response</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="live-chat-msg-container">
+                    <!-- Where live support will have the conversation -->
+                    <div class="livechatmessages">
+                        <button class="back-btn">
+                            <span class="material-symbols-outlined">
+                                arrow_back
+                            </span>
+                            Back
+                        </button>
+
+                    </div>
+                    <div class="waiting-message">
+                        One of our 24/7 Teach Support representatives will be with you shortly.
+                    </div>
+                </div>
+
+                <div class="user-input">
+                    <input type="text" name="user-message" id="user-message" placeholder="Send a message">
+                    <button class="send-btn"><span class="material-symbols-outlined">
+                            send
+                        </span></button>
+                    <div id="send-btn-loading"></div>
+                </div>
+            </div>
+        </div>
+
+        <button class="chatbot-btn">
+            <img class="robot"
+                src="https://images.squarespace-cdn.com/content/63c867491abe131843b09837/4638c5cf-e1f4-452e-8973-e9219104fbba/Message+Bot.png?content-type=image%2Fpng"
+                alt="robot-clear">
+            <span class="material-symbols-outlined symbol-x">
+                close
+            </span>
+            <span>Ask our Chatbot!</span>
+        </button>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
