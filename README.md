@@ -18,6 +18,3 @@
   <li>Flask and Express.js for backend development</li>
   <li>Node.js as the runtime environment</li>
 </ul>
-
-<p style="font-size:16px"><strong>Conclusion</strong></p>
-<p>This AI-powered chatbot represents a significant advancement in how 24/7 Education interacts with its user base, offering a blend of automated intelligence and personal touch. By providing instant answers to a wide array of questions and facilitating direct conversations with team members via Slack, the chatbot enhances the overall customer support experience.</p>
