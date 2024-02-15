@@ -1,6 +1,4 @@
-<p style="font-weight:bold; font-size:18px">Project README: AI-Powered Chatbot for 24/7 Education</p>
 
-<p style="font-size:16px"><strong>Introduction</strong></p>
 <p>This project is an AI-powered chatbot developed by a team of four during an internship at 24/7 Education. It aims to enhance customer support by providing immediate, intelligent responses to queries about the company. The chatbot integrates a live chat feature, connecting users directly with real people through websockets and Slack for a seamless support experience.</p>
 
 <p style="font-size:16px"><strong>Features</strong></p>
