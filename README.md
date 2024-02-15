@@ -1,14 +1,23 @@
-The 24/7 Education Chatbot is an AI-powered tool designed to enhance user engagement and provide immediate, automated responses to questions about the company. Developed by a team of four during a software engineering internship, this project leverages the latest in AI technology and web development practices to offer a comprehensive and responsive user support system. With a backend powered by GPT's API, a dynamic webcrawler for context-aware responses, and a live chat feature integrating with Slack, the chatbot delivers an innovative support solution for both users and employees of 24/7 Education.
+<p style="font-weight:bold; font-size:18px">Project README: AI-Powered Chatbot for 24/7 Education</p>
 
-Features
-AI-Powered Responses: Utilizes OpenAI's GPT API to generate accurate and context-aware answers to user inquiries.
-Dynamic Webcrawler: Enhances the chatbot's responses with up-to-date context extracted from the entire 24/7 Education website.
-FAQ Database: Contains hundreds of pre-defined answers to frequently asked questions, ensuring quick response times.
-Live Chat Integration: Offers a live chat option that connects users with real people via Slack, enabling employees to provide personalized support.
-Technology Stack
-Backend: Python, Flask
-Frontend: JavaScript, HTML, CSS
-AI: OpenAI's GPT API
-Webcrawler: Custom-built using Python
-Live Chat: WebSockets for real-time communication, Slack API for employee notifications
-Database: MongoDB/SQL (depending on your storage choice for FAQs and chat logs)
+<p style="font-size:16px"><strong>Introduction</strong></p>
+<p>This project is an AI-powered chatbot developed by a team of four during an internship at 24/7 Education. It aims to enhance customer support by providing immediate, intelligent responses to queries about the company. The chatbot integrates a live chat feature, connecting users directly with real people through websockets and Slack for a seamless support experience.</p>
+
+<p style="font-size:16px"><strong>Features</strong></p>
+<p><strong>1. Backend API with GPT:</strong> Utilizes OpenAI's GPT API to generate accurate and relevant answers to user questions. The AI is trained to understand and respond to queries related to 24/7 Education effectively.</p>
+<p><strong>2. Webcrawler:</strong> Employs a custom webcrawler that scans the company's website to provide the chatbot with the latest information and context, ensuring that the AI's responses are up-to-date and comprehensive.</p>
+<p><strong>3. Extensive FAQ Database:</strong> Includes a vast repository of answers to frequently asked questions, allowing for quick and automatic responses to common queries.</p>
+<p><strong>4. Live Chat to Slack Integration:</strong> Features a live chat system that connects users with company employees through Slack. This enables real-time communication and personal assistance, ensuring that more complex questions or issues are addressed efficiently.</p>
+
+<p style="font-size:16px"><strong>Technologies Used</strong></p>
+<p>The chatbot leverages several technologies and frameworks, including:</p>
+<ul>
+  <li>OpenAI's GPT API for intelligent response generation</li>
+  <li>Websockets for real-time communication in the live chat feature</li>
+  <li>Slack API for seamless integration with company communication channels</li>
+  <li>Flask and Express.js for backend development</li>
+  <li>Node.js as the runtime environment</li>
+</ul>
+
+<p style="font-size:16px"><strong>Conclusion</strong></p>
+<p>This AI-powered chatbot represents a significant advancement in how 24/7 Education interacts with its user base, offering a blend of automated intelligence and personal touch. By providing instant answers to a wide array of questions and facilitating direct conversations with team members via Slack, the chatbot enhances the overall customer support experience.</p>
